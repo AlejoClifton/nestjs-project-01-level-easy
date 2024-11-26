@@ -20,6 +20,7 @@
 1. Validar los datos de entrada (título obligatorio, descripción opcional).
 2. Persistir los datos en una base de datos MySQL.
 3. Documentar la API con Swagger.
+4. Crear Seed.
 
 ## Endpoints Ejemplo:
 
