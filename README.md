@@ -6,9 +6,7 @@
 
 ## Descripción:
 
-```
-El cliente necesita una API para gestionar tareas personales. Cada tarea tiene un título, una descripción y un estado (pendiente o completada).
-```
+- El cliente necesita una API para gestionar tareas personales. Cada tarea tiene un título, una descripción y un estado (pendiente o completada).
 
 ## Requerimientos Funcionales:
 
