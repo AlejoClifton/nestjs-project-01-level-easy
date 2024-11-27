@@ -11,13 +11,13 @@ export class CreateTaskDto {
     title: string;
 
     @ApiProperty({ description: 'La descripción de la tarea', required: false })
-    @IsString()
     @IsOptional()
+    @IsString()
     description: string;
 
     @ApiProperty({ description: 'La descripción de la tarea', required: false })
-    @IsString()
-    @IsOptional()
     @IsIn(['pending', 'complete'], { message: 'El estado debe ser "active" o "inactive"' })
+    @IsOptional()
+    @IsString()
     state: string;
 }

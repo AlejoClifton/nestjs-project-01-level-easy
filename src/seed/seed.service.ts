@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { Task } from 'src/tasks/entities/task.entity';
+import { Task } from '@/tasks/entities/task.entity';
 
 import { seedTasks } from './seedTasks';
 
@@ -19,7 +19,11 @@ export class SeedService {
 
             return 'Seed ejecutado correctamente';
         } catch (error) {
-            console.error('Error al ejecutar el seed:', error);
+            this.handleExceptions(error);
         }
+    }
+
+    private handleExceptions(error: any) {
+        throw new InternalServerErrorException(error.message || 'Internal server error');
     }
 }

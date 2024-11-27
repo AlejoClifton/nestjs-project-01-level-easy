@@ -26,9 +26,9 @@ export class TasksService {
         }
     }
 
-    findAll() {
+    async findAll() {
         try {
-            return this.taskRepository.find();
+            return await this.taskRepository.find();
         } catch (error) {
             this.handleExceptions(error);
         }
@@ -71,7 +71,6 @@ export class TasksService {
     }
 
     private handleExceptions(error: any) {
-        console.log(error);
-        throw new InternalServerErrorException(`Can't create Tasks - Check server logs`);
+        throw new InternalServerErrorException(error.message || 'Internal server error');
     }
 }
