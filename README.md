@@ -80,4 +80,4 @@ http://localhost:3000/api/v1/seed
 
 ## Tiempo empleado
 
-- 2 Horas.
+- 3 Horas.
